@@ -38,7 +38,3 @@ def mergeSort(S):
         #print("S = {}".format(S))
 
     return S
-
-
-l = [6, 3, 5, 2, 1, 0, 10, -2]
-print(mergeSort(l))

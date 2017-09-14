@@ -44,7 +44,3 @@ def heapSort(S:list):
     S.pop(0)
 
     return S
-
-
-l = [27, 17, 3, 16, 13, 10, 15, 7, 12, 4, 8, 9, 0]
-print(heapSort(l))

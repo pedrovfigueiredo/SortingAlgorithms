@@ -11,7 +11,4 @@ def insertionSort(list):
             list[j + 1] = list[j]
             j -= 1
         list[j + 1] = aux
-
-l = [54,26,93,17,77,31,44,55,20]
-insertionSort(l)
-print(l)
+    return list

@@ -14,12 +14,4 @@ def selectionSort(list):
         temp = list[i]
         list[i] = list[minIndex]
         list[minIndex] = temp
-
-
-l = [54,26,93,17,77,31,44,55,20]
-selectionSort(l)
-print(l)
-
-
-
-
+    return list

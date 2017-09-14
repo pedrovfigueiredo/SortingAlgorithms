@@ -7,16 +7,16 @@ def Partition(S):
     x = S[0]
     a = 1
     b = len(S) - 1
-    while(True):
-        while(S[b] > x):
-            b -= 1
-        while(S[a] < x):
+    while(a < b):
+        while(S[a] <= x and a < b):
             a += 1
-        if a <= b:
+        while (S[b] > x):
+            b -= 1
+        if a < b:
             (S[a], S[b]) = (S[b], S[a])
-        else:
-            (S[0],S[b]) = (S[b], S[0])
-            return b
+
+    (S[0], S[b]) = (S[b], S[0])
+    return b
 
 def quickSort(S):
     if (len(S) > 1):
@@ -24,7 +24,3 @@ def quickSort(S):
         S[:q] = quickSort(S[:q])
         S[q+1:] = quickSort(S[q + 1:])
     return S
-
-
-l = [7,4,1,9,3,2]
-print(quickSort(l))
