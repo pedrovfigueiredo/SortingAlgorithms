@@ -5,16 +5,21 @@
 
 from time import time
 
+def calculateTime(sort, A):
+
+    start = time()
+    sort(A)
+    end = time()
+    elapsed_time = round(end - start, 5)
+    return elapsed_time
+
 def displaySortStatistics(sort, file: str, name: str):
     # reading ints from file
     with open(file) as f:
         A = [int(line.rstrip('\n')) for line in f]
 
-    start = time()
-    sort(A)
-    end = time()
+    elapsed_time = calculateTime(sort,A)
 
-    elapsed_time = round(end - start, 5)
     print("---------", name, "---------")
     print("Elapsed time:", elapsed_time , "seconds\n")
 
@@ -26,7 +31,15 @@ def compareSorts(sorts: list, file: str):
         A = [int(line.rstrip('\n')) for line in f]
 
     # sort[0] = function and sort[1] = name
-    times = [[sort[0], displaySortStatistics(sort[1],file,sort[0])] for sort in sorts]
+    times = sorted([[sort[0], calculateTime(sort[1],A)] for sort in sorts], key= lambda x: x[1],reverse=False)
+
+    print("-----------------------------")
+    print("Instance:", file)
+    for time in times:
+        print(time[0],time[1], "seconds")
+    print("-----------------------------")
+
+
 
 
 

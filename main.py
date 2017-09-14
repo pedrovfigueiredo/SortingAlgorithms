@@ -13,7 +13,19 @@ from SelectionSort import selectionSort
 # Main file to call sorts and compare instances
 
 
-PrintSorts.displaySortStatistics(countingSort,"instances/num.100000.1.in", "Counting Sort")
-PrintSorts.displaySortStatistics(quickSort,"instances/num.100000.1.in", "Quick Sort")
+#PrintSorts.displaySortStatistics(radixSort,"instances/num.100000.4.in", "Radix Sort")
+#PrintSorts.displaySortStatistics(quickSort,"instances/num.100000.1.in", "Quick Sort")
 
-PrintSorts.compareSorts([["Heap Sort", heapSort], ["Radix Sort", radixSort]], "instances/num.1000.1.in")
+PrintSorts.compareSorts([["Counting Sort", countingSort], ["Radix Sort", radixSort]], "instances/counting.txt")
+#PrintSorts.compareSorts([["Counting Sort", countingSort], ["Radix Sort", radixSort]], "instances/num.1000.1.in")
+#PrintSorts.compareSorts([["Counting Sort", countingSort], ["Radix Sort", radixSort]], "instances/num.1000.2.in")
+#PrintSorts.compareSorts([["Counting Sort", countingSort], ["Radix Sort", radixSort]], "instances/num.1000.3.in")
+#PrintSorts.compareSorts([["Counting Sort", countingSort], ["Radix Sort", radixSort]], "instances/num.1000.4.in")
+#PrintSorts.compareSorts([["Counting Sort", countingSort], ["Radix Sort", radixSort]], "instances/num.10000.1.in")
+#PrintSorts.compareSorts([["Counting Sort", countingSort], ["Radix Sort", radixSort]], "instances/num.10000.2.in")
+#PrintSorts.compareSorts([["Counting Sort", countingSort], ["Radix Sort", radixSort]], "instances/num.10000.3.in")
+#PrintSorts.compareSorts([["Counting Sort", countingSort], ["Radix Sort", radixSort]], "instances/num.10000.4.in")
+#PrintSorts.compareSorts([["Counting Sort", countingSort], ["Radix Sort", radixSort]], "instances/num.100000.1.in")
+#PrintSorts.compareSorts([["Counting Sort", countingSort], ["Radix Sort", radixSort]], "instances/num.100000.2.in")
+#PrintSorts.compareSorts([["Counting Sort", countingSort], ["Radix Sort", radixSort]], "instances/num.100000.3.in")
+#PrintSorts.compareSorts([["Counting Sort", countingSort], ["Radix Sort", radixSort]], "instances/num.100000.4.in")
